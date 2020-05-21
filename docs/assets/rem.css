@@ -1,0 +1,13 @@
+:root {
+  /**
+   * 当窗口逻辑像素宽度正好与设计稿宽度相同时的 HTML 字号
+   * 要和 JS 配置一致，默认是 30
+   */
+  --rem-base-font-size: 30;
+}
+
+/** 用设计稿的像素大小转换成 rem */
+.logo-css3 {
+  width: calc(150rem / var(--rem-base-font-size));
+  height: calc(150rem / var(--rem-base-font-size));
+}

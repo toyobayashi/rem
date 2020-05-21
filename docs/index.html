@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rem Layout</title>
+  <link rel="stylesheet" href="./assets/style.css">
+  <link rel="stylesheet" href="./assets/rem.css">
+</head>
+<body>
+  <img src="./assets/logo.png" alt="Vue logo" class="logo">
+  <img src="./assets/logo.png" alt="Vue logo" class="logo-css3">
+  <p>document.documentElement.clientWidth: <span id="clientWidth"></span></p> 
+  <div id="remOptions"></div>
+  <div id="imgSize"></div>
+  <script src="./assets/rem.min.js"></script>
+  <script>
+    rem.enable();
+  </script>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var oc = rem.changeOption;
+      rem.changeOption = function changeOption (a, b) {
+        oc(a, b);
+        showRemOption();
+        showImgSize();
+      };
+
+      var eventName = 'resize';
+
+      if (typeof window.document.addEventListener === 'function') {
+        window.addEventListener(eventName, onResize, false);
+        document.addEventListener('DOMContentLoaded', onResize, false);
+      } else {
+        window.attachEvent('onresize', onResize);
+        window.attachEvent('onload', onResize);
+      }
+      showRemOption();
+
+      function showRemOption () {
+        var divRemOptions = document.getElementById('remOptions');
+        divRemOptions.innerHTML = '';
+        var options = rem.getOption();
+        for (var key in options) {
+          if (Object.prototype.hasOwnProperty.call(options, key)) {
+            var p = document.createElement('p');
+            p.innerHTML = key + ': ' + options[key];
+            divRemOptions.appendChild(p);
+          }
+        }
+      }
+
+      function showImgSize () {
+        var divImgSize = document.getElementById('imgSize');
+        divImgSize.innerHTML = '';
+        var imgs = document.getElementsByTagName('img');
+        for (var i = 0; i < imgs.length; i++) {
+          var p = document.createElement('p');
+          p.innerHTML = imgs[i].clientWidth + ' x ' + imgs[i].clientHeight;
+          divImgSize.appendChild(p);
+        }
+      }
+
+      function onResize () {
+        var spanClientWidth = document.getElementById('clientWidth');
+        spanClientWidth.innerHTML = document.documentElement.clientWidth + 'px';
+
+        showImgSize();
+      }
+    })();
+  </script>
+
+  <!-- IE8 -->
+  <script src="./assets/rem.polyfill.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+{
+  "name": "@tybys/rem",
+  "version": "1.0.0",
+  "description": "REM layout",
+  "typings": "./lib/esm/index.d.ts",
+  "module": "./lib/esm/index.js",
+  "main": "./lib/cjs/index.js",
+  "scripts": {
+    "prepare": "npm run build",
+    "cjs": "tsgo cjs",
+    "esm": "tsgo esm",
+    "umd": "tsgo umd",
+    "dts": "tsgo dts",
+    "doc": "tsgo doc",
+    "watch": "tsgo watch",
+    "build": "tsgo build",
+    "lint": "tsgo lint",
+    "fix": "tsgo fix",
+    "css": "stylus ./docs/assets/style.styl -o ./docs/assets/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toyobayashi/rem.git"
+  },
+  "bugs": {
+    "url": "https://github.com/toyobayashi/rem/issues"
+  },
+  "homepage": "https://github.com/toyobayashi/rem#readme",
+  "keywords": [
+    "rem"
+  ],
+  "author": "toyobayashi",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@tybys/tsgo": "^0.0.9",
+    "@types/node": "^12.12.36",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "eslint": "^7.0.0",
+    "eslint-config-standard-with-typescript": "^16.0.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "stylus": "^0.54.7",
+    "typescript": "^3.9.3"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,10 @@
+{
+  "extends": "./node_modules/@tybys/tsgo/tsconfig/tsconfig.esm.json",
+  "compilerOptions": {
+    "outDir": "./lib/esm",
+    "target": "ES5"
+  },
+  "include": [
+    "./src/**/*"
+  ]
+}
