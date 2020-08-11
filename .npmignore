@@ -12,3 +12,4 @@ api-extractor.json
 .eslint*
 gulpfile.*
 /test
+tsgo.config*
