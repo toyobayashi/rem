@@ -35,18 +35,21 @@
     "access": "public"
   },
   "devDependencies": {
-    "@tybys/tsgo": "^0.0.9",
+    "@tybys/tsgo": "0.1.0",
     "@types/node": "^12.12.36",
-    "@typescript-eslint/eslint-plugin": "^2.34.0",
-    "@typescript-eslint/parser": "^2.34.0",
-    "eslint": "^7.0.0",
-    "eslint-config-standard-with-typescript": "^16.0.0",
-    "eslint-plugin-import": "^2.20.2",
+    "@typescript-eslint/eslint-plugin": "^3.9.0",
+    "@typescript-eslint/parser": "^3.9.0",
+    "eslint": "^7.6.0",
+    "eslint-config-standard-with-typescript": "^18.0.2",
+    "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "stylus": "^0.54.7",
-    "typescript": "^3.9.3"
+    "rollup": "^2.23.1",
+    "stylus": "^0.54.8",
+    "typescript": "^3.9.7"
   },
-  "dependencies": {}
+  "dependencies": {
+    "tslib": "2.0.1"
+  }
 }
